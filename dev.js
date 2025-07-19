@@ -10,4 +10,7 @@ for(let i = 0; i < 5; i++) {
 console.log("This is a loop iteration: " + i);
 
 const app = require('express');
-const path = require('path');       
+const path = require('path'); 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});       
